@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mainStackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kontroler.WindowController">
+    <children>
+        <Slider fx:id="Speed" max="1.0" onMouseReleased="#speed" prefHeight="14.0" prefWidth="234.0" showTickMarks="true" value="0.5">
+            <StackPane.margin>
+                <Insets left="300.0" right="300.0" top="665.0" />
+            </StackPane.margin>
+        </Slider>
+        <Label fx:id="Selected" prefHeight="30.0" prefWidth="294.0">
+            <StackPane.margin>
+                <Insets bottom="650.0" right="135.0" />
+            </StackPane.margin>
+        </Label>
+        <Button fx:id="Choose" mnemonicParsing="false" onAction="#choose" text="Open file">
+            <StackPane.margin>
+                <Insets bottom="650.0" right="500.0" />
+            </StackPane.margin>
+        </Button>
+      <Label text="Liczba generacji:">
+         <StackPane.margin>
+            <Insets bottom="650.0" left="250.0" />
+         </StackPane.margin>
+      </Label>
+      <Button fx:id="Stop" mnemonicParsing="false" onAction="#stop" text="Stop">
+         <StackPane.margin>
+            <Insets right="300.0" top="650.0" />
+         </StackPane.margin>
+      </Button>
+      <ToggleButton fx:id="Start" mnemonicParsing="false" onAction="#play" text="Start">
+         <StackPane.margin>
+            <Insets right="500.0" top="650.0" />
+         </StackPane.margin>
+         <toggleGroup>
+            <ToggleGroup fx:id="playpause" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="Pause" mnemonicParsing="false" onAction="#pause" text="Pause" toggleGroup="$playpause">
+         <StackPane.margin>
+            <Insets right="400.0" top="650.0" />
+         </StackPane.margin>
+      </ToggleButton>
+      <TextField fx:id="Quantity" maxHeight="26.0" maxWidth="45.0" minHeight="26.0" minWidth="45.0" onAction="#number" prefHeight="26.0" prefWidth="45.0">
+         <StackPane.margin>
+            <Insets bottom="650.0" left="390.0" />
+         </StackPane.margin>
+      </TextField>
+      <Button fx:id="Save" mnemonicParsing="false" onAction="#save" text="Save">
+         <StackPane.margin>
+            <Insets left="300.0" top="650.0" />
+         </StackPane.margin>
+      </Button>
+      <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#showInformation" text=" i " textAlignment="CENTER">
+         <StackPane.margin>
+            <Insets bottom="650.0" right="590.0" />
+         </StackPane.margin>
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+    </children>
+</StackPane>
